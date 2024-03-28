@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "1c648320-ae43-4da7-b5ce-75160021a691",
+		"name": "OnlineBMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "820961"
+	},
+	"item": [
+		{
+			"name": "addBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookName\": \"Concepts Of Physics\",\n    \"authorId\": 5,\n    \"categoryId\": 3,\n    \"edition\": 1,\n    \"numOfCopies\": 1,\n    \"publishedDate\": \"2024-06-24\",\n    \"price\": 780.98,\n    \"isbn\": \"sdfr8563\",\n    \"availableForIssue\" : \"Y\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/inventory/manage/book/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"inventory",
+						"manage",
+						"book",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchBooksByCatagory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookCategory\" : \"Math\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/book/searchbycategory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"book",
+						"searchbycategory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchBooksByAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"authorName\" : \"grewal\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/book/searchbyauthor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"book",
+						"searchbyauthor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "bookBorrowRequest",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\" : \"siddhartha.k\",\n    \"bookId\" : 4\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/book//request/borrow",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"book",
+						"",
+						"request",
+						"borrow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookName\": \"Engineering Mathematics\",\n    \"authorId\": 1,\n    \"categoryId\": 2,\n    \"edition\": 1,\n    \"numOfCopies\": 1,\n    \"publishedDate\": \"2024-06-24\",\n    \"price\": 780.98,\n    \"isbn\": \"sdfr4563\",\n    \"bookId\": 4,\n    \"availableForIssue\" : \"Y\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/inventory/manage/book/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"inventory",
+						"manage",
+						"book",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBook",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"bookId\": 3\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/inventory/manage/book/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"inventory",
+						"manage",
+						"book",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addAuthor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"authorName\" : \"S Sharma\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/author/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"author",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"categoryName\" : \"Physics\",\n   \"categoryDescription\" : \"Related to any field of Physics\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/category/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"category",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByAuthorNameLike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "verma",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/author/findByNameLike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"author",
+						"findByNameLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByCategoryNameLike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "Math",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/category/findByNameLike",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"category",
+						"findByNameLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateAuthor",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"author\": {\n        \"authorName\": \"Robin Sharma\",\n        \"authorDescription\": \"Famous author of Monk who sold his ferrari\"\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/author/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"author",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCategory",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category\": {\n        \"categoryName\" : \"Engineering\",\n        \"categoryDescription\": \"Related to any field of Engineering\"\n    }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/obms/manage/category/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"obms",
+						"manage",
+						"category",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
